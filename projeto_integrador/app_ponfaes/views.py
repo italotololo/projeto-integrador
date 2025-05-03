@@ -20,7 +20,7 @@ def home(request):
     return render(request,'home/home.html')
 
 def avisos_home(request):
-    return render(request,'avisos/home.html')
+    return render(request,'home/avisos.html')
 
 def boletim_home(request):
     return render(request,'boletim/home.html')
