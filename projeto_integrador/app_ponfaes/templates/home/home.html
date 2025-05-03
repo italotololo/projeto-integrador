@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ titulo }}</title>
+    <meta charset="UTF-8" />
+    <title>Bem-vindo ao PONFAES</title>
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f8ff;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        header {
-            background-color:rgb(16, 29, 107);
-            padding: 10px;
-            color: white;
+
+        h1 {
+            color: #2c3e50;
             text-align: center;
+            margin-bottom: 20px;
         }
-        main {
-            margin-top: 20px;
-        }
-        footer {
-            margin-top: 30px;
+
+        p {
             text-align: center;
-            font-size: 0.9em;
-            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            display: block;
+            padding: 15px 20px;
+            background-color: #3498db; /* azul suave */
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        a:hover {
+            background-color: #2980b9; /* tom mais escuro */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>{{ Avisos }}</h1>
-    </header>
-    <main>
-        <p>Bem-vindo ao Ponfaes {{ titulo }}!</p>
-        <!-- Aqui você pode colocar o conteúdo específico de cada view -->
-    </main>
-    <footer>
-        <p>&copy; 2025 projeto integrador</p>
-    </footer>
+    <h1>Bem-vindo ao Ponfaes</h1>
+    <p>Selecione uma seção:</p>
+    <ul>
+        <li><a href="{% url 'avisos_home' %}">Avisos</a></li>
+        <li><a href="{% url 'boletim_home' %}">Boletim</a></li>
+        <li><a href="{% url 'frequencia_home' %}">Frequência</a></li>
+        <li><a href="{% url 'comunicacao_home' %}">Comunicação</a></li>
+        <li><a href="{% url 'agenda_home' %}">Agenda</a></li>
+    </ul>
 </body>
 </html>
