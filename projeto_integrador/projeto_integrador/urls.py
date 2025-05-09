@@ -17,4 +17,5 @@ urlpatterns = [
     path('frequencia/', views.frequencia_home, name='frequencia_home'),
     path('comunicacao/', views.comunicacao_home, name='comunicacao_home'),
     path('agenda/', views.agenda_home, name='agenda_home'),
+    path('mensagem/', views.mensagem_home, name='mensagem_home'),
 ]

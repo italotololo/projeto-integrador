@@ -34,4 +34,5 @@ def comunicacao_home(request):
 def agenda_home(request):
     return render(request,'agenda/home.html')
 
-
+def mensagem_home(request):
+    return render(request,'home/mensagem.html')
